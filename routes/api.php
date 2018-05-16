@@ -16,3 +16,10 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/categories',function (){
+    return \App\Category::all()->toArray();
+});
+Route::get('/assets',function (){
+    return \App\Asset::all()->toArray();
+});
