@@ -16,4 +16,8 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::resource('manage','AssetController');
+Route::group(['prefix'=>'manage'],function (){
+    Route::resource('assets','AssetController');
+    Route::resource('categories','CategoryController');
+});
+

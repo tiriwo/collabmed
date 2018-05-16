@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Asset;
 use Illuminate\Http\Request;
 
 class AssetController extends Controller
@@ -34,7 +35,10 @@ class AssetController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+           'name'=>'required'
+        ]);
+        Asset::create($request->all());
     }
 
     /**
@@ -68,7 +72,13 @@ class AssetController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+            'name'=>'required'
+        ]);
+        $asset= Asset::find($id);
+        $asset->fill($request->all());
+        $asset->save();
+        return response()->json(['message'=>'success','status'=>'success'],200);
     }
 
     /**
