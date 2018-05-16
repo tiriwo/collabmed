@@ -32,9 +32,14 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
+                @if(Auth::user() && Auth::user()->is_admin==1)
                 <ul class="navbar-nav mr-auto">
-
+                   <li class="nav-link"><a href="/manage/assets">Assets</a> </li>
+                   <li class="nav-link"><a href="/manage/categories">Categories</a> </li>
+                   <li class="nav-link"><a href="/manage/borrow-list">Manage Borrowing</a> </li>
+                   <li class="nav-link"><a href="/manage/view-report">Reports</a> </li>
                 </ul>
+                @endif
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->
                     @guest
