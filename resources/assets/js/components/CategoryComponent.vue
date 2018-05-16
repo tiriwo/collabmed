@@ -2,6 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+                <a href="/manage/assets">Assets</a>
                 <button type="button" class="btn btn-sm btn-primary float-right" @click="initCreateCategory">
                     Add Category
                 </button>

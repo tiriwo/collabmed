@@ -2,6 +2,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+             <a href="/manage/categories">Categories</a>
+             <a href="/manage/view-report">View Report</a>
             <button type="button" class="btn btn-primary float-right" @click="initCreateAsset">
                 Add Asset
             </button>

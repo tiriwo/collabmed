@@ -2,6 +2,8 @@
 @section('content')
 
   <div class="container">
+      <a href="/manage/categories">Categories</a>
+      <a href="/manage/assets">Assets</a>
       <hr class="w-100">
     <div class="row card">
         <div class="card-header">
