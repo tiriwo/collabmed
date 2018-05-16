@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
     <div id="app">
-        <category-component></category-component>
+        <user-component></user-component>
     </div>
 @stop
 @section('scripts')
